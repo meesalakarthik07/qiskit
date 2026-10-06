@@ -1607,6 +1607,10 @@ class QuantumCircuit(IR):
         return str(self.draw(output="text"))
 
     def __eq__(self, other) -> bool:
+            """Check if two QuantumCircuit objects are structurally equal.
+        This method compares the bits, variables, instructions, and global phase
+        of this circuit against another circuit to determine structural identity.
+        """
         if not isinstance(other, QuantumCircuit):
             return False
 
